@@ -67,8 +67,17 @@ class DropboxScaffoldBuilder
     # No need to set up anything
   end
 
+  def build_get_thumbnail_batch
+    file_content = IO.read File.join(fixtures_path, "img.png")
+    client.upload("#{path_prefix}/img.png", file_content)
+  end
+
   # We have a prefix for each endpoint to avoid conflicts across them
   def path_prefix
     File.join PREFIX, @endpoint_name
+  end
+
+  def fixtures_path
+    File.expand_path('../../fixtures', __FILE__)
   end
 end

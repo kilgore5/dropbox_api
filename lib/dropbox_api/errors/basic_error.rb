@@ -35,6 +35,7 @@ module DropboxApi::Errors
   class CantShareOutsideTeamError < BasicError; end
   class ChunkedUploaderError < BasicError; end
   class ContainsSharedFolderError < BasicError; end
+  class ConversionError < BasicError; end
   class CursorClosedError < BasicError; end
   class CursorNotClosedError < BasicError; end
   class DisallowedNameError < BasicError; end
@@ -91,5 +92,6 @@ module DropboxApi::Errors
   class UnmountedError < BasicError; end
   class UnsupportedContentError < BasicError; end
   class UnsupportedExtensionError < BasicError; end
+  class UnsupportedImageError < BasicError; end
   class UnverifiedDropboxId < BasicError; end
 end

@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://content.dropboxapi.com/2/files/get_thumbnail_batch
+    body:
+      encoding: UTF-8
+      string: '{"entries":[{"format":"jpeg","size":"w64h64","mode":"strict","path":"/dropbox_api_fixtures/get_thumbnail_batch/unknown_file.jpg"}]}'
+    headers:
+      Authorization:
+      - Bearer MOCK_AUTHORIZATION_BEARER
+      User-Agent:
+      - Faraday v0.12.2
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 13 Feb 2018 05:02:16 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache
+      X-Server-Response-Time:
+      - '229'
+      X-Dropbox-Request-Id:
+      - 30270e40fb9c995c6effe8a74a5ed4ec
+      X-Robots-Tag:
+      - noindex, nofollow, noimageindex
+    body:
+      encoding: ASCII-8BIT
+      string: '{"entries": [{".tag": "failure", "failure": {".tag": "path", "path":
+        {".tag": "not_found"}}}]}'
+    http_version: 
+  recorded_at: Tue, 13 Feb 2018 05:02:16 GMT
+recorded_with: VCR 4.0.0
